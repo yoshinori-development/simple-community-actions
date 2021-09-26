@@ -10,6 +10,7 @@ runs:
   steps:
     # https://awsteele.com/blog/2021/09/15/aws-federation-comes-to-github-actions.html
     - name: Configure AWS
+     shell: bash
       run: |
         export AWS_WEB_IDENTITY_TOKEN_FILE=/tmp/awscreds
         echo AWS_WEB_IDENTITY_TOKEN_FILE=$AWS_WEB_IDENTITY_TOKEN_FILE >> $GITHUB_ENV
